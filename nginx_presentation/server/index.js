@@ -1,6 +1,9 @@
 const express = require('express')
+const path = require('path');
 const app = express()
 const port = 3000
+
+app.use(express.static(path.join(__dirname,'../client/dist')));
 
 let dogs =[
     'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12193133/German-Shepherd-Puppy-Fetch.jpg',
@@ -25,13 +28,15 @@ let other=[
 ];
 
 const getRandom = ()=>{
-    let arr =[];
-    arr.push(dogs[Math.floor(Math.random()*5)]);
-   arr.push(cats[Math.floor(Math.random()*5)]);
-   arr.push(other[Math.floor(Math.random()*5)]);
+    let arr ={};
+    arr.dog=dogs[Math.floor(Math.random()*5)];
+   arr.cat=cats[Math.floor(Math.random()*5)];
+   arr.other=other[Math.floor(Math.random()*5)];
    return arr;
 }
 
-app.get('/', (req, res) => res.send(JSON.stringify(getRandom())));
+app.get('/', (req, res) => res.sendStatus(200));
+app.get('/pics', (req, res) => res.send(JSON.stringify(getRandom())));
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
