@@ -1,5 +1,6 @@
 *.log
 node_modules
-env_var.js
+config.js
 client/dist/bundle.js
+
 
