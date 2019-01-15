@@ -33,19 +33,19 @@ class App extends React.Component {
             return(                
             <Carousel> 
                 <Carousel.Item>        
-                    <img width={900} height={500} alt="pic #1" src={this.state.dog} />                  
+                    <img width={auto} height={500} alt="pic #1" src={this.state.dog} />                  
                     <Carousel.Caption>
                         <h3>A dog</h3>                        
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>                    
-                        <img width={900} height={500} alt="pic #2" src={this.state.cat} />                      
+                        <img width={auto} height={500} alt="pic #2" src={this.state.cat} />                      
                     <Carousel.Caption>
                         <h3>A cat</h3>                        
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>                   
-                   <img width={900} height={500} alt="pic #3" src={this.state.other} />                   
+                   <img width={auto} height={500} alt="pic #3" src={this.state.other} />                   
                     <Carousel.Caption>
                         <h3>What pet is this?</h3>                        
                     </Carousel.Caption>
