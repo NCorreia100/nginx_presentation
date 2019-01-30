@@ -1,0 +1,6 @@
+*.log
+node_modules
+config.js
+client/dist/bundle.js
+
+

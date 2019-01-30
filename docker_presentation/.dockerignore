@@ -1,0 +1,9 @@
+#bundles & external modules
+bundle.js
+node_modules
+
+#documentation and reporting
+*.md
+*.log
+
+#config files
